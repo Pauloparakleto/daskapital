@@ -110,6 +110,7 @@ GEM
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
+    inss_calculator (0.4.0)
     io-console (0.8.0)
     irb (1.14.2)
       rdoc (>= 4.0.0)
@@ -344,6 +345,7 @@ DEPENDENCIES
   debug
   dotenv
   importmap-rails
+  inss_calculator (~> 0.4.0)
   jbuilder
   kamal
   pg (~> 1.1)

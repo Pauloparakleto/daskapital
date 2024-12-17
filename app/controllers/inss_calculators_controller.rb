@@ -4,7 +4,7 @@ class InssCalculatorsController < ApplicationController
 
   def show
     salary = params.fetch(:salary, 0)
-    @inss_calculator = InssCalculator.new(salary: salary)
+    @inss_calculator = Calculator::Inss.new(salary: salary)
   end
 
   def calculate
