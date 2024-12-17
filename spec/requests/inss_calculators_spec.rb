@@ -7,7 +7,7 @@ RSpec.describe "InssCalculators", type: :request do
       expect(response).to have_http_status(:success)
     end
   end
-  
+
   describe "GET /show" do
     it "returns http success" do
       get inss_calculators_show_path
@@ -23,5 +23,4 @@ RSpec.describe "InssCalculators", type: :request do
       expect(response).to redirect_to inss_calculators_show_path(valid_params)
     end
   end
-
 end
