@@ -1,0 +1,8 @@
+<h1>InssCalculators#index</h1>
+<p>Find me in app/views/inss_calculators/index.html.erb</p>
+<%= form_with url: inss_calculators_calculate_path, method: :post do |form| %>
+  <%= form.label :salary, "Salário:" %>
+  <%= form.number_field :salary %>
+  <%= form.submit "Calcular" %>
+<% end %>
+
