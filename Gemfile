@@ -70,4 +70,4 @@ gem "dartsass-rails"
 gem "autoprefixer-rails"
 
 # Bootstrap JavaScript can optionally use jQuery
-gem 'jquery-rails'
+gem "jquery-rails"
