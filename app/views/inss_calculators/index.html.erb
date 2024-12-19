@@ -1,13 +1,29 @@
 <main class="container" %>
-  <div class="card shadow">
-    <div class="card-body">
-      
-      <h1>Calcule sua contribuição do INSS</h1>
-      <%= form_with url: inss_calculators_calculate_path, method: :post do |form| %>
-        <%= form.label :salary, "Salário:" %>
-        <%= form.number_field :salary, step: 0.01 %>
-        <%= form.submit "Calcular" %>
-      <% end %>
+<div class="card shadow">
+  <div class="card-body">
+    <div class="card-header mb-3">
+      <h1>
+        Calcule sua contribuição do INSS
+      </h1>
+      <p class="form-text">Você deve informar seu salário bruto também conhecido como salário de contribuição.
+      Considere a soma de todos os seus benefícios, adicional da família, horas extras, vale transporte etc.</p>
+    </div>
+
+    <%= form_with url: inss_calculators_calculate_path, method: :post, class: "row row-cols-lg-auto g-3 align-items-center" do |form| %>
+      <div class="col-12">
+        <div class="input-group">
+          <div class="input-group-text">
+            R$
+          </div>
+          <%= form.number_field :salary, step: 0.01, class: "form-control" %>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="input-group">
+          <%= form.submit "Calcular", class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
     </div>
   </div>
 </main>
