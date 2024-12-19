@@ -63,3 +63,11 @@ group :development do
 end
 
 gem "inss_calculator", "~> 0.4.0"
+
+# bootstrap and dartsass-rails must be kept together as per https://github.com/twbs/bootstrap-rubygem/blob/main/README.md
+gem "bootstrap", "~> 5.3.3"
+gem "dartsass-rails"
+gem "autoprefixer-rails"
+
+# Bootstrap JavaScript can optionally use jQuery
+gem 'jquery-rails'
