@@ -1,8 +1,14 @@
-<h1>InssCalculators#index</h1>
-<p>Find me in app/views/inss_calculators/index.html.erb</p>
-<%= form_with url: inss_calculators_calculate_path, method: :post do |form| %>
-  <%= form.label :salary, "Salário:" %>
-  <%= form.number_field :salary, step: 0.01 %>
-  <%= form.submit "Calcular" %>
-<% end %>
+<main class="container" %>
+  <div class="card shadow">
+    <div class="card-body">
+      
+      <h1>Calcule sua contribuição do INSS</h1>
+      <%= form_with url: inss_calculators_calculate_path, method: :post do |form| %>
+        <%= form.label :salary, "Salário:" %>
+        <%= form.number_field :salary, step: 0.01 %>
+        <%= form.submit "Calcular" %>
+      <% end %>
+    </div>
+  </div>
+</main>
 
