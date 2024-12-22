@@ -1,5 +1,5 @@
 class InssCalculatorsController < ApplicationController
-  def index
+  def new
   end
 
   def show
