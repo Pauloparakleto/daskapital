@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "inss_calculators#new"
 
-  resource :inss_calculator, only: [:new, :show] do
+  resource :inss_calculator, only: [ :new, :show ] do
     post :calculate, as: :calculate
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -3,11 +3,16 @@ class InssCalculatorsController < ApplicationController
   end
 
   def show
-    salary = params.fetch(:salary, 0)
-    @inss_calculator = Calculator::Inss.new(salary: salary)
+    @inss_calculator = Calculator::Inss.new(salary: salary_params)
   end
 
   def calculate
-    redirect_to action: :show, salary: params.fetch(:salary, 0)
+    redirect_to action: :show, salary: salary_params
+  end
+
+  private
+
+  def salary_params
+    params.fetch(:salary, 0)
   end
 end
