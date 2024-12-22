@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  root to: "inss_calculators#new"
+
+  resource :inss_calculator, only: [ :new, :show ] do
+    post :calculate, as: :calculate
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

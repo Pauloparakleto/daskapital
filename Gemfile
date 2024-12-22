@@ -50,8 +50,12 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
+  # rspec-rails brings the RSpec testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
+  gem "rspec-rails", "~> 7.0.0"
+
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem "rails-controller-testing"
 end
 
 group :development do
@@ -59,3 +63,12 @@ group :development do
   gem "web-console"
 end
 
+gem "inss_calculator", "~> 0.4.0"
+
+# bootstrap and dartsass-rails must be kept together as per https://github.com/twbs/bootstrap-rubygem/blob/main/README.md
+gem "bootstrap", "~> 5.3.3"
+gem "dartsass-rails"
+gem "autoprefixer-rails"
+
+# Bootstrap JavaScript can optionally use jQuery
+gem "jquery-rails"
