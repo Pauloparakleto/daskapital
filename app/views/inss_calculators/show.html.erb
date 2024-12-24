@@ -8,6 +8,8 @@
         <div class="col-12 py-3 text-end">
           <h2 class="me-3"><%= number_to_currency(@inss_calculator.contribution, unit: "R$", separator: ",", delimiter: ".") %></h2>
         </div>
+        <p><%= @inss_calculator.present %></p>
+        <p>A este valor, some os demais benefícios tais como salário família, vale transporte e plano de saúde. Que estão discriminados em seu contra-cheque.</p>
       </div>
       <div class="col-lg-3 mt-3">
         <div class="d-grid gap-2">
