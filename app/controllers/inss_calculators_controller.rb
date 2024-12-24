@@ -19,7 +19,7 @@ class InssCalculatorsController < ApplicationController
   end
 
   def inss_calculator
-    calculator = InssCalculator::DiscountPrevidenceCalculator::new(salary_params)
+    calculator = InssCalculator::DiscountPrevidenceCalculator.new(salary_params)
     @inss_calculator = InssCalculator::Decorator::Text.new(calculator)
   end
 end
