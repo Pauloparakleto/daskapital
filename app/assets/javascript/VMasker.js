@@ -118,8 +118,7 @@ console.log("Precompiled");
     if (!el) {
       throw new Error("VanillaMasker: There is no element to bind.");
     }
-      debugger
-    var elements = ("length" in JSON.parse("[" + el + "]")) ? (el.length ? el : []) : [el];
+    var elements = ("length" in el) ? (el.length ? el : []) : [el];
     return new VanillaMasker(elements);
   };
 
