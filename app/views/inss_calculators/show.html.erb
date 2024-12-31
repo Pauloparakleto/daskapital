@@ -2,10 +2,18 @@
   <div class="masthead-content text-white">
     <div class="container-fluid px-4 px-lg-0">
       <h1 class="fst-italic lh-1 mb-4">Sua contribuição do INSS</h1>
-      <h2><%= number_to_currency(@inss_calculator.contribution, unit: "R$", separator: ",") %></h2>
+      <h2><%= number_to_currency(@inss_calculator.contribution, unit: "R$ ", separator: ",") %></h2>
         <p><%= @inss_calculator.present %></p>
-        <p class="mb-5">A este valor, some os demais benefícios tais como salário família, vale transporte e plano de saúde. Que estão discriminados em seu contra-cheque.</p>
       <%= link_to "Realizar outro cálculo", root_path, class: "btn btn-primary btn-lg", data: { turbo: false }%>
     </div>
   </div>
+</div>
+<!-- Social Icons-->
+<!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
+<div class="social-icons">
+    <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+        <a class="btn btn-dark m-3" href="https://github.com/Pauloparakleto/daskapital"><i class="fab fa-github"></i></a>
+        <a class="btn btn-dark m-3" href="https://www.linkedin.com/in/paulo-souza-a8998410a/"><i class="fab fa-linkedin"></i></a>
+        <a class="btn btn-dark m-3" href="https://www.youtube.com/@paulofelipesilvadesouza7287"><i class="fab fa-youtube"></i></a>
+    </div>
 </div>
