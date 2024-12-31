@@ -10,15 +10,17 @@
             <p class="mb-5">Você deve informar seu salário bruto também conhecido como <em>Salário de contribuição</em>.
               Some o <em>Salário Base</em>, as <em>Horas Extras</em> e o <em>Repouso Remunerado</em>.
             </p>
-            <form>
-                <!-- Email address input-->
-                <div class="row input-group-newsletter">
-                    <div class="col"><input class="form-control" id="email" type="email" placeholder="Digite apenas os números" aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                    <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Calcular</button></div>
-                </div>
-                <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
-                <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
-            </form>
+      <%= form_with url: calculate_inss_calculator_path, method: :post, id: "inss_calculator_form" do |form| %>
+        <div class="row input-group-newsletter">
+          <div class="col">
+            <%= form.text_field :masked_salary, class: "form-control", placeholder: "Digite apenas os números" %>
+            <%= form.hidden_field :salary %>
+          </div>
+          <div class="col-auto">
+            <%= form.submit "Calcular", id: "insss_calculator_submit_button", class: "btn btn-primary", data: { turbo: false } %>
+          </div>
+        </div>
+    <% end %>
         </div>
     </div>
 </div>
@@ -31,35 +33,3 @@
         <a class="btn btn-dark m-3" href="https://www.youtube.com/@paulofelipesilvadesouza7287"><i class="fab fa-youtube"></i></a>
     </div>
 </div>
-
-<main class="container" %>
-  <div class="card shadow">
-    <div class="card-body">
-      <div class="card-header mb-3">
-        <h1>
-          Calcule sua contribuição do INSS
-        </h1>
-        <p class="form-text">Você deve informar seu salário bruto também conhecido como <em>Salário de contribuição</em>.
-        Some o <em>Salário Base</em>, as <em>Horas Extras</em> e o <em>Repouso Remunerado</em>.</p>
-      </div>
-
-      <%= form_with url: calculate_inss_calculator_path, method: :post, id: "inss_calculator_form", class: "row row-cols-lg-auto g-3 align-items-center" do |form| %>
-      <div class="col-12">
-        <div class="input-group">
-          <div class="input-group-text">
-            R$
-          </div>
-          <%= form.text_field :masked_salary, class: "form-control" %>
-          <%= form.hidden_field :salary %>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="d-grid gap-2">
-          <%= form.submit "Calcular", id: "inss_calculator_submit_button", class: "btn btn-lg btn-primary", data: { turbo: false } %>
-        </div>
-      </div>
-    <% end %>
-    </div>
-  </div>
-</main>
-
