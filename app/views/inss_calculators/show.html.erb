@@ -1,21 +1,11 @@
-<main class="container">
-  <div class="card shadow">
-    <div class="card-body">
-      <div class="card-header mb-0">
-        <h1>
-          Sua contribuição para o INSS
-        </h1>
-        <div class="col-12 py-3 text-end">
-          <h2 class="me-3"><%= number_to_currency(@inss_calculator.contribution, unit: "R$", separator: ",", delimiter: ".") %></h2>
-        </div>
+<div class="masthead">
+  <div class="masthead-content text-white">
+    <div class="container-fluid px-4 px-lg-0">
+      <h1 class="fst-italic lh-1 mb-4">Sua contribuição do INSS</h1>
+      <h2><%= number_to_currency(@inss_calculator.contribution, unit: "R$", separator: ",") %></h2>
         <p><%= @inss_calculator.present %></p>
-        <p>A este valor, some os demais benefícios tais como salário família, vale transporte e plano de saúde. Que estão discriminados em seu contra-cheque.</p>
-      </div>
-      <div class="col-lg-3 mt-3">
-        <div class="d-grid gap-2">
-          <%= link_to "Realizar outro cálculo", root_path, class: "btn btn-primary btn-lg", data: { turbo: false }%>
-        </div>
-      </div>
+        <p class="mb-5">A este valor, some os demais benefícios tais como salário família, vale transporte e plano de saúde. Que estão discriminados em seu contra-cheque.</p>
+      <%= link_to "Realizar outro cálculo", root_path, class: "btn btn-primary btn-lg", data: { turbo: false }%>
     </div>
   </div>
-</main>
+</div>
