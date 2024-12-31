@@ -4,12 +4,12 @@
 <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="#" type="video/mp4" /></video>
 <!-- Masthead-->
 <div class="masthead">
-    <div class="masthead-content text-white">
-        <div class="container-fluid px-4 px-lg-0">
-            <h1 class="fst-italic lh-1 mb-4">Calcule sua contribuição do INSS</h1>
-            <p class="mb-5">Você deve informar seu salário bruto também conhecido como <em>Salário de contribuição</em>.
-              Some o <em>Salário Base</em>, as <em>Horas Extras</em> e o <em>Repouso Remunerado</em>.
-            </p>
+  <div class="masthead-content text-white">
+    <div class="container-fluid px-4 px-lg-0">
+      <h1 class="fst-italic lh-1 mb-4">Calcule sua contribuição do INSS</h1>
+      <p class="mb-5">Você deve informar seu salário bruto também conhecido como <em>Salário de contribuição</em>.
+        Some o <em>Salário Base</em>, as <em>Horas Extras</em> e o <em>Repouso Remunerado</em>.
+      </p>
       <%= form_with url: calculate_inss_calculator_path, method: :post, id: "inss_calculator_form" do |form| %>
         <div class="row input-group-newsletter">
           <div class="col">
@@ -20,9 +20,9 @@
             <%= form.submit "Calcular", id: "insss_calculator_submit_button", class: "btn btn-primary", data: { turbo: false } %>
           </div>
         </div>
-    <% end %>
-        </div>
+      <% end %>
     </div>
+  </div>
 </div>
 
 <%= render "icons" %>
