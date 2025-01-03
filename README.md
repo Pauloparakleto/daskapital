@@ -1,24 +1,9 @@
-# README
+# DAS KAPITAL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Calculadora de desconto da contribuição do INSS
 
-Things you may want to cover:
+Este projeto é uma landing page que utiliza a ruby gem [InssCalculator](https://github.com/Pauloparakleto/inss_calculator).
 
-* Ruby version
+Utiliza-se este [tema do bootstrap](https://github.com/StartBootstrap/startbootstrap-coming-soon), para o qual somos muito gratos.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Daskapital image](./public/daskapital.png)
