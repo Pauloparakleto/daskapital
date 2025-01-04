@@ -1,4 +1,4 @@
-# DAS KAPITAL
+# Calcula Inss
 
 Calculadora de desconto da contribuição do INSS
 
