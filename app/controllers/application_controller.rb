@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       yield
     rescue StandardError => exception
       Sentry.capture_exception(exception)
-      Sentry.capture_message("yield application error env")
+      Sentry.capture_message("yield application error")
       raise exception
     end
   end
