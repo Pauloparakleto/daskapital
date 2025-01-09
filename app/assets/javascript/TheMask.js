@@ -1,7 +1,5 @@
 class TheMask {
   static use(event){
-    console.log("using the mask");
-
     let input = event.target;
     let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
     let cursorPosition = input.selectionStart;
