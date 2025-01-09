@@ -8,7 +8,5 @@ document.getElementById('masked_salary').addEventListener('input', function(e) {
 
 inssCalculatorForm.addEventListener("submit", (event) =>{
   let inputSalary = document.querySelector("#masked_salary");
-  let masker = new VMasker(inputSalary);
-  debugger
   hiddenElement.value = TheMask.unuse(inputSalary.value);
 });
