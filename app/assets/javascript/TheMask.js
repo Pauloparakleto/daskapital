@@ -11,23 +11,15 @@
  To remove the mask, the argument is literally the masked value,
  not the document component. In your view, use TheMask.unuse(component.value)
 */
-
 class TheMask {
-  static use(event) {
-    const input = event.target;
-    let value = input.value.replace(/\D/g, '');
-    const oldCursorPos = input.selectionStart;
-    const oldValueLength = input.value.length;
-
+  static use(value) {
+    value = value.replace(/\D/g, ''); // Remove non-numeric characters
     value = (value / 100).toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+,)/g, '$1.');
-    input.value = value;
-    const newValueLength = input.value.length;
-    const newCursorPos = Math.max(oldCursorPos + (newValueLength - oldValueLength), 0);
-    input.setSelectionRange(newCursorPos, newCursorPos);
+    return value;
   }
 
   static unuse(maskedValue) {
-    return parseFloat(maskedValue.replace('.', '').replace(',', '.'));
+    return parseFloat(maskedValue.replace(/\./g, '').replace(',', '.'));
   }
 }
 
