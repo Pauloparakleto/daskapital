@@ -1,7 +1,6 @@
 /*
  TheMask, is The Money Mask
  "Somebody Stop me!"
-
  Give me the input event and use it like this:
 
  TheMask.use(event) => 1.000,00
