@@ -1,3 +1,17 @@
+/*
+ TheMask, is The Money Mask
+ "Somebody Stop me!"
+
+ Give me the input event and use it like this:
+
+ TheMask.use(event) => 1.000,00
+
+ The backend (client) needs the number version?
+ TheMask.unuse(maskedValue) => 1000.0
+ To remove the mask, the argument is literally the masked value,
+ not the document component. In your view, use TheMask.unuse(component.value)
+*/
+
 class TheMask {
   static use(event) {
     const input = event.target;
