@@ -22,3 +22,4 @@ class TheMask {
     return parseFloat(maskedValue.replace(/\./g, '').replace(',', '.'));
   }
 }
+
