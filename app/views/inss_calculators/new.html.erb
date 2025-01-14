@@ -22,9 +22,7 @@
         <div class="mt-3">
           <div class="form-check">
             <%= form.check_box :public, class: "form-check-input", value: "false" %>
-            <label class="form-check-label" for="flexCheckDefault">
-              Servidor público
-            </label>
+            <%= form.label :public, "Servidor Público", class: "form-check-label" %>
           </div>
         </div>
       <% end %>
