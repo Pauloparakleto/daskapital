@@ -26,12 +26,24 @@ RSpec.describe "InssCalculators", type: :request do
   end
 
   describe "POST /calculate" do
-    let(:valid_params) { { salary: 3000 } }
+    context 'when private salary' do
+      let(:valid_params) { { salary: 52000.54, public: "0" } }
 
-    it "returns http success" do
-      post calculate_inss_calculator_path, params: valid_params
+      it "returns http success" do
+        post calculate_inss_calculator_path, params: valid_params
 
-      expect(response).to redirect_to inss_calculator_path(valid_params)
+        expect(response).to redirect_to inss_calculator_path(valid_params)
+      end
+    end
+
+    context 'when public salary' do
+      let(:valid_params) { { salary: 52000.54, public: "1" } }
+
+      it "returns http success" do
+        post calculate_inss_calculator_path, params: valid_params
+
+        expect(response).to redirect_to inss_calculator_path(valid_params)
+      end
     end
   end
 end
