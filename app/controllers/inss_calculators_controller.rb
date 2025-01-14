@@ -9,17 +9,26 @@ class InssCalculatorsController < ApplicationController
   end
 
   def calculate
-    redirect_to action: :show, salary: salary_params
+    redirect_to action: :show, public: salary_params[:public], salary: salary_params[:salary]
   end
 
   private
 
   def salary_params
-    params.fetch(:salary, 0)
+    params.permit(:salary, :public)
   end
 
   def inss_calculator
-    calculator = InssCalculator::DiscountPrevidenceCalculator.new(salary_params)
-    @inss_calculator = InssCalculator::Decorator::Text.new(calculator)
+    @inss_calculator = calculator
+  end
+
+  def calculator
+    @calculator = if salary_params[:public].to_i.zero?
+      InssCalculator::DiscountPrevidenceCalculator.new(salary_params[:salary])
+    else
+      InssCalculator::PublicInssCalculator.new(salary_params[:salary])
+    end
+
+   InssCalculator::Decorator::Text.new(@calculator)
   end
 end
