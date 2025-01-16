@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   inssCalculatorForm.addEventListener("submit", (event) => {
     hiddenElement.value = TheMask.unuse(inputSalary.value);
     if (parseFloat(hiddenElement.value) < 1412) {
-      alertMessage.innerHTML = `<p class="text-success fs-6">Igual ou maior do que R$ 1412,00</p>`;
+      alertMessage.innerHTML = `<p class="text-success fs-6 m-0">Igual ou maior do que R$ 1412,00</p>`;
 
       event.preventDefault();
     }
