@@ -12,7 +12,7 @@
       <%= form_with url: calculate_inss_calculator_path, method: :post, id: "inss_calculator_form" do |form| %>
         <div class="row input-group-newsletter">
           <div class="col">
-            <%= form.text_field :masked_salary, class: "form-control", placeholder: "Somente números" %>
+            <%= form.text_field :masked_salary, class: "form-control", value: "1412,00", placeholder: "Somente números" %>
             <%= form.hidden_field :salary %>
           </div>
           <div class="col-auto">
