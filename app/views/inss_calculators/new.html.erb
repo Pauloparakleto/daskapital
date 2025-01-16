@@ -10,7 +10,7 @@
         Some o <em>Salário Base</em>, as <em>Horas Extras</em> e o <em>Repouso Remunerado</em>.
       </p>
       <%= form_with url: calculate_inss_calculator_path, method: :post, id: "inss_calculator_form" do |form| %>
-        <div class="row input-group-newsletter">
+        <div class="row input-group-newsletter mb-1">
           <div class="col">
             <%= form.text_field :masked_salary, class: "form-control", value: "1412,00", placeholder: "Somente números" %>
             <%= form.hidden_field :salary %>
@@ -21,7 +21,7 @@
           <div id="input-salary-alert">
           </div>
         </div>
-        <div class="mt-3">
+        <div>
           <div class="form-check">
             <%= form.check_box :public, class: "form-check-input", value: "false" %>
             <%= form.label :public, "Servidor Público", class: "form-check-label" %>
