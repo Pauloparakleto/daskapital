@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hiddenElement = document.querySelector("#salary");
   const inssCalculatorForm = document.querySelector("#inss_calculator_form");
   const alertMessage = document.querySelector("#input-salary-alert");
+  const inputGroupCalculator = document.querySelector("#input-group-calculator");
 
   inputSalary.addEventListener('input', e => {
     const cursorPosition = e.target.selectionStart;
@@ -19,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   inssCalculatorForm.addEventListener("submit", (event) => {
     hiddenElement.value = TheMask.unuse(inputSalary.value);
     if (parseFloat(hiddenElement.value) < 1412) {
+      inputGroupCalculator.classList.replace("mb-4", "mb-0");
       alertMessage.innerHTML = `<p class="text-success fs-6 m-0">Igual ou maior do que R$ 1412,00</p>`;
-
       event.preventDefault();
     }
   });
