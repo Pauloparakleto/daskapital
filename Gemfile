@@ -65,7 +65,7 @@ group :development do
   gem "web-console"
 end
 
-gem "inss_calculator", "~> 0.4.0"
+gem "inss_calculator", "~> 0.4.2"
 
 # bootstrap and dartsass-rails must be kept together as per https://github.com/twbs/bootstrap-rubygem/blob/main/README.md
 gem "bootstrap", "~> 5.3.3"
