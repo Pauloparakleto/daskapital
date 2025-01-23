@@ -10829,10 +10829,6 @@ html {
   height: 100%;
 }
 
-body {
-  height: 100%;
-  position: relative;
-}
 body:before {
   content: "";
   position: fixed;
