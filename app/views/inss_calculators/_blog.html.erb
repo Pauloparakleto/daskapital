@@ -7,7 +7,7 @@
   </p>
 
   <p>
-   A tabela com as faixas salariais está no <%= link_to "Anexo III da referida Portaria Interna", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %>.
+   A tabela com as faixas salariais está no <%= link_to "Anexo II da referida Portaria Interna", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %>.
   </p>
 
   <table class="table">
@@ -67,6 +67,74 @@
 
     Embora saibamos que o INSS recolheu para si R$ 218,82, este montante não foi fruto de uma única taxa fixa.
   </p>
+
+  <h3>Como se calcula para as demais faixas salariais?</h3>
+
+  <p>
+    No exemplo com as balanças, estas representam a quantidade de rodadas pelas quais um salário 
+    será distribuido para ser taxado sob diferentes alíquotas. Para um salário que esteja dentro da terceira faixa salarial, 
+    digamos, R$ 3.000,00, acrescenta-se a terceira balança de alíquota 12% sobre a diferença entre 3.000,00 e 2.666,69.
+    Ou seja, 12% de R$ 333,31,  que é R$ 39,9972. Novamente, considera-se somente as duas primeiras casas decimais após 
+    a vírgula, R$ 39,99. Por fim, soma-se este montante com os demais fruto do resultado das porcentagens da primeira
+    e da segunda rodada de taxação das duas primeiras balanças.
+  </p>
+
+  <p>Atenção, salários muito acima do limite da última faixa salarial são taxados até o limite de R$ 908,85
+  para o regime CLT. Ou seja, aplicado todas as rodadas de taxação sobre um salário muito alto, o INSS não pode recolher
+  mais do que R$ 908,85.</p>
+
+  <h3>Como funciona o cálculo para o servidor público?</h3>
+
+  <p>A explicação sobre o cálculo do regime CLT permanece válida. Vamos destacar aqui somente as
+  diferenças.</p>
+
+  <p>Existem mais faixas salariais no cálculo para o servidor público. A tabela do servidor público 
+  está no <%= link_to "Anexo III da referida Portaria Interna", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %>.</p>
+
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Salário de contribuição (R$)</td>
+        <td>Alíquota (%)</td>
+      </tr>
+      <tr>
+        <td>Até 1.412,00</td>
+        <td>7,5</td>
+      </tr>
+      <tr>
+        <td>De 1.412,01 a 2.666,68</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>De 2.666,69 a 4.000,03</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>De 4.000,04 a 7.786,02</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>De 7.786,03 a 13.333,48</td>
+        <td>14,5</td>
+      </tr>
+      <tr>
+        <td>De 13.333,49 a 26.666,94</td>
+        <td>16,5</td>
+      </tr>
+      <tr>
+        <td>De 26.666,94 a 52.000,54</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td>Acima de 52.000,54</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Vamos olhar para a última faixa salarial. Os salários acima de 52.000,54 são taxados em 22%.
+  Ou seja, sem limite sobre o montante que deve ser recolhido. Enquanto que no regime CLT, os salário acima 
+  da última faixa salarial da tabela CLT não podem ser taxados acima do limite de R$ 908,85.</p>
 
   <h3>O que é o salário de contribuição?</h3>
 
