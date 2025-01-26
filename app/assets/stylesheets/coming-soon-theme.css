@@ -10857,6 +10857,9 @@ video.bg-video {
   body video {
     display: none;
   }
+  .masthead .masthead-content {
+    min-height: 600px;
+  }
 }
 .masthead {
   position: relative;
