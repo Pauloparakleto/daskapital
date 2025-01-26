@@ -1,12 +1,17 @@
-<div class="masthead">
-  <div class="masthead-content text-white">
-    <div class="container-fluid px-4 px-lg-0">
-      <h1 class="fst-italic lh-1 mb-4">Sua contribuição do INSS</h1>
-      <h2><%= @inss_calculator.contribution %></h2>
-        <p><%= @inss_calculator.present %></p>
-      <%= link_to "Realizar outro cálculo", root_path, class: "btn btn-primary btn-lg", data: { turbo: false }%>
+<div class="main">
+  <div class="masthead">
+    <div class="masthead-content text-white">
+      <div class="container-fluid px-4 px-lg-0">
+        <h1 class="fst-italic lh-1 mb-4">Sua contribuição do INSS</h1>
+        <h2><%= @inss_calculator.contribution %></h2>
+          <p><%= @inss_calculator.present %></p>
+        <%= link_to "Realizar outro cálculo", root_path, class: "btn btn-primary btn-lg", data: { turbo: false }%>
+      </div>
     </div>
   </div>
+
+  <%= render "icons" %>
 </div>
 
-<%= render "icons" %>
+
+<%= render "blog" %>
