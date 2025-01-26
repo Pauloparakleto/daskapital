@@ -1,4 +1,10 @@
-.blog p {
-  font-size: 1.125em;
-  display: block;
+.blog {
+  p {
+    font-size: 1.125em;
+    display: block;
+  }
+  table {
+    max-width: 500px;
+  }
 }
+
