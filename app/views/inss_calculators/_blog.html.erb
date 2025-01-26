@@ -1,0 +1,96 @@
+<div class="container mt-3 blog">
+  <h1>Cálculo da contribuição do INSS 2024</h1>
+
+  <p>
+    A <%= link_to "Portaria Interministerial n. 2 de 11 de Janeiro de 2024", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %> determina como se dá o cálculo da contribuição do INSS. O cálculo é progressivo.
+    Isto significa que ele foi pensado para taxar com alíquota menor quem recebe menos e taxar com alíquota maior na medida em que os salários escalam faixas salariais mais altas.
+  </p>
+
+  <p>
+   A tabela com as faixas salariais está no <%= link_to "Anexo III da referida Portaria Interna", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %>.
+  </p>
+
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Salário de contribuição (R$)</td>
+        <td>Alíquota (%)</td>
+      </tr>
+      <tr>
+        <td>Até 1.412,00</td>
+        <td>7,5</td>
+      </tr>
+      <tr>
+        <td>De 1.412,01 a 2.666,68</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>De 2.666,69 a 4.000,03</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>De 4.000,04 a 7.786,02</td>
+        <td>14</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    O salário mínimo de <em>R$ 1.412,00</em> em 2024, por exemplo, está na primeira faixa. 
+    Você deve usar a alíquota de 7,5%. A contribuição para este salário é de R$ 105,90. Já o salário de R$ 2.666,68 está  na segunda faixa salarial. Você deve aplicar a alíquota da primeira faixa até o limite de R$ 1.412,00 e, após isto, aplicar a alíquota da segunda faixa sobre o montante restante. Aqui você dever ter muita atenção. A alíquota da segunda faixa vai ser aplicada somente à diferença entre o salário de contribuição e o limite da faixa anterior.
+  </p>
+
+  <p>
+    Pense nas diferentes alíquotas sendo aplicadas em diferentes partes do salário da seguinte forma.
+    Vamos chamar de Kg de sal ao invés de dinheiro por um momento.
+
+    Você chegou ao INSS com uma quantidade de sal. Pesados, a balança apontou seus 2.666.68 Kg de sal.
+    A primeira parte vai ser separada para a balança da primeira faixa salarial.
+    Você retira do seu montante uma parte até a balança marcar 1.412,00 Kg.
+    O INSS vai recolher 7,5% desse montante, ou seja, 105,90 Kg. Desta primeira balança, vai restar para você 1.306,10 Kg. 
+    Guarde este valor. Deixemos este resto em espera e vamos olhar para a segunda parte do seu salário. 
+    Lembre-se que você separou 1.412,00 Kg para ser medido na primeira balança.
+    Agora você deposita sobre a segunda balança o que tem consigo e o resultado é 2.666,68 Kg menos os 1.412,00 Kg que já foi medido na primeira balança.
+  </p>
+
+  <p>
+    Sobre a segunda balança, portanto, tem-se 1.254,68 Kg. Esta segunda balança sofre uma taxa de 9% sobre os 1.254,68 Kg.
+    Note que esta segunda etapa tem uma taxação maior do que a anterior.
+    O INSS, deveria recolher 112,9212 Kg fruto desta taxa de 9%.
+    Mas vai considerar somente as duas primeiras casas decimais após a vírgula. Vai recolher, então, 112,92 Kg.
+    Desta segunda rodada sobra para você 1.141,76 Kg.
+
+    Da primeira rodada restou para você 1.306,10 Kg e da segunda rodada sobrou 1.141,76 Kg. 
+    A soma dos dois montantes é o seu salário líquido.
+    Obviamente estamos falando de salário em dinheiro até porque quem consegue carregar sozinho mais de 2 mil quilos de sal?
+    Seu salário líquido é de R$ 2.447,86 (a soma de 1.306,10 e 1.141,76).
+
+    Embora saibamos que o INSS recolheu para si R$ 218,82, este montante não foi fruto de uma única taxa fixa.
+  </p>
+
+  <h3>O que é o salário de contribuição?</h3>
+
+  <p>
+    O salário de contribuição que aparece no contra-cheque é a soma do salário base mais as eventuais horas extras.
+    Fica de fora do salário de contribuição o descanso remunerado, auxílio família, vale transporte, vale alimentação.
+    É sobre este salário de contribuição que se calcula a contribuição do INSS.
+  </p>
+
+  <h3>As horas extras entram no cálculo do salário de contribuição?</h3>
+
+  <p>
+    Sim. O salário de contribuição envolve os ganhos mediante o tempo de trabalho.
+  </p>
+
+  <h3>Como fica o cálculo com o novo salário mínimo de 2025?</h3>
+
+  <p>
+    O novo salário mínimo é de <%= link_to "R$ 1.518,00", "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/D12342.htm" %>. 
+    O Ministério da Previdência Social divulgou a nova <%= link_to "tabela para 2025", "https://www.gov.br/secom/pt-br/assuntos/noticias/2025/janeiro/inss-divulga-os-novos-valores-dos-beneficios-para-2025" %>.
+  </p>
+
+  <p>
+    O princípio de taxar salários maiores com taxas maiores e salários menores com taxas menores permanece.
+    Isto significa que o princípio da progressividade continua.
+  </p>
+</div>
