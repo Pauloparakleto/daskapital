@@ -2,3 +2,10 @@
   background-color: #2a5555;
   height: 100vh;
 }
+
+@media (pointer: coarse) and (hover: none) {
+  .main {
+    height: 732px;
+
+  }
+}
