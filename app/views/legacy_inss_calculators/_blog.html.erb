@@ -4,12 +4,12 @@
   <p><em>Você pode navegar para a nova <%= link_to "calculadora 2025", new_inss_calculator_path %>.</em></p>
 
   <p>
-    A <%= link_to "Portaria Interministerial n. 2 de 11 de Janeiro de 2024", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %> determina como se dá o cálculo da contribuição do INSS. O cálculo é progressivo.
+    A <%= legacy_inss_law_link %> determina como se dá o cálculo da contribuição do INSS. O cálculo é progressivo.
     Isto significa que ele foi pensado para taxar com alíquota menor quem recebe menos e taxar com alíquota maior na medida em que os salários escalam faixas salariais mais altas.
   </p>
 
   <p>
-   A tabela com as faixas salariais está no <%= link_to "Anexo II da referida Portaria Interna", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %>.
+   A tabela com as faixas salariais está no <%= legacy_inss_law_link "Anexo II da referida Portaria Interna" %>.
   </p>
 
   <table class="table">
@@ -91,7 +91,8 @@
   diferenças.</p>
 
   <p>Existem mais faixas salariais no cálculo para o servidor público. A tabela do servidor público 
-  está no <%= link_to "Anexo III da referida Portaria Interna", "https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232", target: "_blank" %>.</p>
+    está no <%= legacy_inss_law_link "Anexo III da referida Portaria Interna" %>.
+  </p>
 
   <table class="table">
     <tbody>
